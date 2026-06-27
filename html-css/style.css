@@ -1,0 +1,49 @@
+body {
+    background-color: aliceblue;
+}
+.first-layout,
+.second-layout,
+.third-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.item {
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid;
+    border-color: black;
+    border-radius: 10px;
+    background-color: green;
+    font-size: 16px;
+    font-weight: bold;
+}
+.item:hover {
+    transform: translateY(3px);
+}
+
+.first-layout {
+    padding-bottom: 10px;
+}
+.first-layout .item {
+    flex-basis: calc((100% - 48px) / 4);
+}
+.second-layout {
+    padding: 10px;
+}
+.second-layout > .item {
+    flex-basis: calc((100% - 16px) / 2);
+}
+.third-layout {
+    padding-top: 20px;
+}
+.third-layout > .item {
+    flex-basis: calc((100% - 80px) / 6);
+    flex-shrink: 0;
+}
