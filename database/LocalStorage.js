@@ -1,6 +1,8 @@
 const form = document.querySelector("form");
+
 const email = document.getElementById("text");
 const password = document.getElementById("password");
+
 const savedemail = localStorage.getItem("email");
 const savedpassword = localStorage.getItem("password");
 
